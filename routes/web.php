@@ -14,7 +14,7 @@
 
 Route::get('/', 'HomeController@index')->name('welcome');
 
-Route::post('/reservation', 'ReservationController@reserve')->name('reservation.reserve');
+// Route::post('/reservation', 'ReservationController@reserve')->name('reservation.reserve');
 //user message
 Route::post('/contact', 'ContactController@sendMessage')->name('contact.send');
 
@@ -33,13 +33,13 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth','namespace'=>'admin'], fun
 	Route::resource('gallery', 'SiteGalleryController');
 	Route::resource('siteinfo/info', 'SiteInfoController');
 	Route::resource('slider', 'SliderController');
-	Route::resource('category', 'CategoryController');
+	// Route::resource('category', 'CategoryController');
 	Route::resource('item', 'ItemController');
 	Route::resource('dish', 'DishesController');
 	Route::resource('dishitem', 'DishItemsController');
 
 	Route::get('reservation', 'ReservationController@index')->name('reservation.index');
-	Route::post('reservation/{id}', 'ReservationController@status')->name('reservation.status');
+	// Route::post('reservation/{id}', 'ReservationController@status')->name('reservation.status');
 	Route::delete('reservation/{id}', 'ReservationController@destroy')->name('reservation.delete');
 
 	Route::get('contact', 'ContactController@index')->name('contact.index');
