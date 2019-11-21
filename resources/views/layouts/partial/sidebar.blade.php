@@ -20,19 +20,19 @@
           <p>Site Gallery</p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('admin/slider','admin/slider/create') ? 'active':'' }}">
+      <li class="nav-item {{ Request::is('admin/slider*') ? 'active':'' }}">
         <a class="nav-link" href="{{route('slider.index')}}">
           <i class="material-icons">slideshow</i>
           <p>Sliders</p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('admin/category','admin/category/create') ? 'active':'' }}">
+      <li class="nav-item {{ Request::is('admin/category*') ? 'active':'' }}">
         <a class="nav-link" href="{{route('category.index')}}">
           <i class="material-icons">content_paste</i>
           <p>Categories</p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('admin/item','admin/item/create') ? 'active':'' }}">
+      <li class="nav-item {{ Request::is('admin/item*') ? 'active':'' }}">
         <a class="nav-link" href="{{route('item.index')}}">
           <i class="material-icons">bubble_chart</i>
           <p>Items</p>
